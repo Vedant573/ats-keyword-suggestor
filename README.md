@@ -34,7 +34,7 @@ This project supports:
 
 ## 📂 Project Structure
 ```bash
-ATS_Optimizer/
+ats-keyword-suggestor/
 ├── ATS_Keyword_Suggestor.py
 ├── requirements.txt
 ├── README.md
