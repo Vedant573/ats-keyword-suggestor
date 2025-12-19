@@ -186,6 +186,12 @@ Do not hard-code API keys
 Use environment variables or config files (for which import -> ```from dotenv import load_dotenv``` store your API keys there and make a try except block to load the .env file) 
 Never commit secrets to GitHub
 
+## 📸 Screenshots
+<img width="1000" height="824" alt="Screenshot 2025-12-19 150125" src="https://github.com/user-attachments/assets/c69cf8cc-a127-45c6-a70f-e9307a97bc6c" />
+<img width="892" height="726" alt="Screenshot 2025-12-19 150147" src="https://github.com/user-attachments/assets/53165503-bb66-435e-a19d-ea2d2fee6a79" />
+<img width="896" height="726" alt="Screenshot 2025-12-19 150137" src="https://github.com/user-attachments/assets/af56b562-2317-410f-a843-226e81059118" />
+
+
 ## **📄 License**
 
 This project is for educational and demonstration purposes.
