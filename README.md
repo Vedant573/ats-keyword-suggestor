@@ -61,12 +61,6 @@ Verify installation:
 ```bash
 python --version
 ```
-⚠️ Important:
-During installation, make sure to check “Add Python to PATH”
-
-Verify installation:
-
-python --version
 
 ### **Step 2: Create Project Directory**
 ```bash
@@ -74,7 +68,7 @@ mkdir ATS_Optimizer
 cd ATS_Optimizer
 ```
 
-### **Step 3: Create a Virtual Environment (Recommended) **
+### **Step 3: Create a Virtual Environment (Recommended)**
 For windows:
 ```bash 
 python -m venv venv
@@ -86,7 +80,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-# **Step 4: Install Dependencies**
+### **Step 4: Install Dependencies**
 
 Create a file named requirements.txt: (or if you have cloned this repository, install the dependency via command in the next section)
 ```bash
