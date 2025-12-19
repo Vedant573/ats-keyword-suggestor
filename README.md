@@ -183,7 +183,7 @@ Click CONVERT .PY TO .EXE
 ## **🔐 Security Notes**
 
 Do not hard-code API keys
-Use environment variables or config files (for which -> ```from dotenv import load_dotenv``` store your API keys there and make a try except block to load the .env file) 
+Use environment variables or config files (for which import -> ```from dotenv import load_dotenv``` store your API keys there and make a try except block to load the .env file) 
 Never commit secrets to GitHub
 
 ## **📄 License**
