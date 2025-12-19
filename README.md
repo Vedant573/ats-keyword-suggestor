@@ -33,13 +33,13 @@ This project supports:
 ---
 
 ## 📂 Project Structure
-
+```bash
 ATS_Optimizer/
 ├── ATS_Keyword_Suggestor.py
 ├── requirements.txt
 ├── README.md
 └── venv/ (optional)
-
+```
 
 ---
 
@@ -74,59 +74,43 @@ mkdir ATS_Optimizer
 cd ATS_Optimizer
 ```
 
-### **Step 3: Create a Virtual Environment (Recommended)**
-
-```bash windows
+### **Step 3: Create a Virtual Environment (Recommended) **
+For windows:
+```bash 
 python -m venv venv
 venv\Scripts\activate
 ```
-macOS / Linux
+for macOS / Linux:
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
+# **Step 4: Install Dependencies**
 
-Why use a virtual environment?
-
-Isolates project dependencies
-
-Prevents conflicts with system Python packages
-
-Makes the project portable and reproducible
-
-Step 4: Install Dependencies
-
-Create a file named requirements.txt:
-
+Create a file named requirements.txt: (or if you have cloned this repository, install the dependency via command in the next section)
+```bash
 PyPDF2==3.0.1
 openai==1.12.0
 anthropic==0.18.1
 google-generativeai==0.3.2
+```
 
-
-Install dependencies:
-
+**Install dependencies:**
+```bash
 pip install -r requirements.txt
+```
 
-Dependency Breakdown
-Package	Purpose
-PyPDF2	PDF text extraction (required)
-openai	OpenAI API integration (optional)
-anthropic	Claude API integration (optional)
-google-generativeai	Gemini API integration (optional)
-
-⚠️ API keys are not included.
+## **⚠️ API keys are not included.**
 Add your own API keys as environment variables or configuration values.
 
-Step 5: Save the Code
 
-Save the application file as:
-
-ATS_Keyword_Suggestor.py
-
-Step 6: Run the Application
+## **Step 6: Run the Application**
+```bash
 python ATS_Keyword_Suggestor.py
+```
 
-📦 Creating a Windows Executable (.exe)
+## **📦 Creating a Windows Executable (.exe)**
 Method 1: PyInstaller (Recommended)
 Step 1: Install PyInstaller
 pip install pyinstaller
@@ -134,91 +118,81 @@ pip install pyinstaller
 Step 2: Create Executable
 
 Basic Command
-
+```bash
 pyinstaller --onefile --windowed ATS_Keyword_Suggestor.py
+```
 
-
-Advanced Command (Recommended)
-
+**Advanced Command (Recommended)**
+```bash
 pyinstaller --onefile ^
             --windowed ^
             --name "ATS_Optimizer" ^
             --icon=app_icon.ico ^
             --add-data "README.txt;." ^
             ATS_Keyword_Suggestor.py
+```
 
-Flags Explained
-Flag	Description
---onefile	Packages everything into a single .exe
---windowed	Hides console window (GUI only)
---name	Output executable name
---icon	Custom application icon
---add-data	Include extra files
-Step 3: Locate the Executable
+## **Step 3: Locate the Executable**
 cd dist
 
 
 Your executable will be available as:
-
+```bash
 ATS_Optimizer.exe
-
-Step 4: Test
+```
+## **Step 4: Test**
 
 Double-click ATS_Optimizer.exe to run the application.
 
-🧯 Common PyInstaller Issues & Fixes
-Issue 1: Failed to execute script
+## **🧯 Common PyInstaller Issues & Fixes**
+**Issue 1: Failed to execute script**
 
 Solution:
 Build without --onefile to see detailed errors:
-
+```bash
 pyinstaller --windowed ATS_Keyword_Suggestor.py
-
-Issue 2: Missing Modules
+```
+**Issue 2: Missing Modules**
 
 Solution: Add hidden imports:
-
+```bash
 pyinstaller --onefile ^
             --windowed ^
             --hidden-import=PyPDF2 ^
             --hidden-import=tkinter ^
             ATS_Keyword_Suggestor.py
-
-Issue 3: Large Executable Size
+```
+**Issue 3: Large Executable Size**
 
 Solution: Use UPX compression:
-
+```bash
 pip install upx
 pyinstaller --onefile --windowed --upx-dir=/path/to/upx ATS_Keyword_Suggestor.py
-
-🧰 Method 2: Auto-py-to-exe (GUI Tool)
-Step 1: Install
+```
+## **🧰 Method 2: Auto-py-to-exe (GUI Tool)**
+**Step 1: Install**
+```bash
 pip install auto-py-to-exe
-
-Step 2: Launch
+```
+**Step 2: Launch**
+```bash
 auto-py-to-exe
-
-Step 3: Configure
+```
+**Step 3: Configure**
 
 Script Location: ATS_Keyword_Suggestor.py
-
 One File: Enabled
-
 Console Window: Window Based (hide console)
-
 Icon: Optional (.ico file)
-
 Click CONVERT .PY TO .EXE
 
-🔐 Security Notes
+## **🔐 Security Notes**
 
 Do not hard-code API keys
-
 Use environment variables or config files
-
 Never commit secrets to GitHub
 
-📄 License
+## **📄 License**
 
 This project is for educational and demonstration purposes.
 You may adapt or extend it for personal or professional use.
