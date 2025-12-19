@@ -1,55 +1,66 @@
-ATS Optimizer – Keyword Suggestor
+# 🚀 ATS Optimizer – Keyword Suggestor
 
-An Applicant Tracking System (ATS) keyword optimization tool that analyzes resumes (PDF) and suggests relevant keywords to improve ATS matching.
-The project supports local execution and Windows executable (.exe) packaging for easy distribution.
+An **Applicant Tracking System (ATS) keyword optimization tool** that analyzes resume PDFs and suggests relevant keywords to improve ATS matching scores.
 
-📌 Features
+This project supports:
+- Local execution using Python  
+- Packaging into a **Windows executable (.exe)** for easy distribution  
 
-Extracts text from resume PDFs
+---
 
-Suggests ATS-friendly keywords
+## 📌 Features
 
-Optional integration with multiple LLM providers
+- 📄 Extracts text from resume PDFs  
+- 🔍 Suggests ATS-friendly keywords  
+- 🤖 Optional AI integrations:
+  - OpenAI
+  - Anthropic (Claude)
+  - Google Gemini
+- 📦 Can be packaged as a standalone `.exe`
 
-OpenAI
+---
 
-Anthropic (Claude)
+## 🛠️ Tech Stack
 
-Google Gemini
+- **Python 3.8+**
+- **PyPDF2** – PDF text extraction
+- **LLM APIs (Optional)**
+  - OpenAI
+  - Anthropic
+  - Google Generative AI
+- **PyInstaller** – Executable creation
 
-Can be packaged as a standalone Windows executable
+---
 
-🛠️ Tech Stack
+## 📂 Project Structure
 
-Python 3.8+
-
-PyPDF2 – PDF text extraction
-
-LLM APIs (Optional)
-
-OpenAI
-
-Anthropic
-
-Google Generative AI
-
-PyInstaller – Executable creation
-
-📂 Project Structure
 ATS_Optimizer/
 ├── ATS_Keyword_Suggestor.py
 ├── requirements.txt
 ├── README.md
 └── venv/ (optional)
 
-🚀 Running the Project (Step-by-Step)
-Step 1: Install Python
 
-Download Python 3.8 or later from:
+---
 
-https://www.python.org/downloads/
+## 🚀 Running the Project (Step-by-Step)
 
+---
 
+### **Step 1: Install Python**
+
+Download **Python 3.8 or later** from:
+
+🔗 https://www.python.org/downloads/
+
+⚠️ **IMPORTANT:**  
+Check **“Add Python to PATH”** during installation.
+
+Verify installation:
+
+```bash
+python --version
+```
 ⚠️ Important:
 During installation, make sure to check “Add Python to PATH”
 
@@ -57,15 +68,18 @@ Verify installation:
 
 python --version
 
-Step 2: Create Project Directory
+### **Step 2: Create Project Directory**
+```bash
 mkdir ATS_Optimizer
 cd ATS_Optimizer
+```
 
-Step 3: Create a Virtual Environment (Recommended)
-Windows
+### **Step 3: Create a Virtual Environment (Recommended)**
+
+```bash windows
 python -m venv venv
 venv\Scripts\activate
-
+```
 macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
